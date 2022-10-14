@@ -13,7 +13,7 @@ def compte_input():
 
 #menu principal
 def afficher_menu():
-    menu = input(" 1 : nouveau compte \n 2 : se connecter \n 3 : quitter 4 : afficher les comptes")
+    menu = input(" 1 : nouveau compte \n 2 : se connecter \n 3 : quitter \n 4 : afficher les comptes \n")
     if menu == "1":
         tuple_p_m = compte_input()
         pseudo = ''.join(tuple_p_m[0:1])
@@ -40,15 +40,15 @@ def se_connecter():
 
     try: 
         if logins[mdp] == pseudo:
-            print("vous etes connectés")
+            print("vous etes connectés\n")
             afficher_menu_in()
     except:
-        print("logins incorrects")
+        print("logins incorrects\n")
         afficher_menu_in()
     
 #affiche un menu apres avoir effectué une action
 def afficher_menu_in():
-    menu_in = input("3 : quitter \n 4 : menu")
+    menu_in = input(" 3 : quitter \n 4 : menu\n")
     if menu_in =="4":
         afficher_menu()
 
@@ -64,7 +64,7 @@ def afficher_comptes():
 #inscrire un nouveau compte dans la base de donnée
 def nouveau_compte(pseudo, mot_de_passe):
     logins[mot_de_passe] = pseudo
-    print("votre compte a été créé au nom de", pseudo)
+    print("votre compte a été créé au nom de", pseudo, "\n")
     afficher_menu_in()
     return 0
 
