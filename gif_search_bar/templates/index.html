@@ -1,0 +1,15 @@
+<! DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form method="post">
+            <input type="search" name="recherche" id="recherche">
+            <button type="submit">Recherche</button>
+        </form>
+        {% for elem in contenu %}
+        <img src="{{elem}}">
+        {% endfor %}
+    </body>
+</html>
