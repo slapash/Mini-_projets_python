@@ -8,10 +8,10 @@ app = Flask(__name__)
 def home():
     return "hello home"
 
-
+liste_gifs = []
 @app.route('/handle', methods=("GET", "POST"))
 def rechercher():
-
+    global liste_gifs
     global contenu_requete
     if request.method == "POST":
         contenu_requete = request.form['recherche']

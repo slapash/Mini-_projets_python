@@ -19,16 +19,12 @@ def gif_links(recherche):
 
   return data
 
-
-#print(gif_links("makima")["data"])
-
-  #urls = data["data"][numero]["images"]["original"]["url"]
 liste = []
 def formater(data):
   global liste
   for elem in data["data"]:
     liste.append(elem["images"]["original"]["url"])
-    print(elem["images"]["original"]["url"])
+    print(elem["images"]["original"]["webp"])
   return liste
 
 
